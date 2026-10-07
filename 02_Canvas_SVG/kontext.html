@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kontext holen</title>
+    <style>
+        canvas {
+            border: 1px solid #193058;
+        }
+
+        pre {
+            font-size: 18px;
+            color: #193058;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game" width="600" height="250"></canvas>
+    <pre id="log"></pre>
+    <script type="module">
+        // 1. Element holen: null, wenn die id nicht existiert
+        const canvas = document.querySelector('#game');
+        if (!canvas) throw new Error('Kein <canvas id="game">');
+
+        // 2. Kontext anfordern: null bei unbekanntem Typ, z. B. '2D'
+        const ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('2D-Kontext nicht verfügbar');
+
+        // 3. Was haben wir bekommen?
+        document.querySelector('#log').textContent =
+            `Typ:              ${ctx.constructor.name}\n` +
+            `ctx.canvas:       ${ctx.canvas === canvas}\n` +
+            `2. getContext():  ${canvas.getContext('2d') === ctx}\n` +
+            `danach 'webgl':   ${canvas.getContext('webgl')}`;
+
+        // 4. Erst jetzt zeichnen
+        ctx.fillStyle = '#00aadc';
+        ctx.fillRect(50, 50, 200, 120);
+    </script>
+</body>
+
+</html>

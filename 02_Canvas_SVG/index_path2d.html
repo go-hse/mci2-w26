@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Path2D: Geometrie einmal bauen, oft zeichnen</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #193058;
+        }
+
+        canvas {
+            border: 1px solid #193058;
+            background: #f0f0f0;
+        }
+
+        #info {
+            font-family: monospace;
+            font-size: 16px;
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game" width="800" height="450"></canvas>
+    <p>
+        <label><input type="radio" name="modus" value="cache" checked> Path2D, einmal gebaut</label>
+        <label><input type="radio" name="modus" value="neu"> Pfad in jedem Frame neu (moveTo/lineTo)</label>
+        <label><input type="radio" name="modus" value="svg"> SVG-String in jedem Frame parsen</label>
+    </p>
+    <p>
+        <label>Zahnräder: <input type="range" id="anzahl" min="100" max="3000" step="100" value="1000"></label>
+        <span id="anzahlWert"></span>
+    </p>
+    <p id="info"></p>
+    <p>Klick auf ein Zahnrad färbt es um (Hit-Testing mit isPointInPath).</p>
+    <script type="module" src="main_path2d.mjs"></script>
+</body>
+
+</html>

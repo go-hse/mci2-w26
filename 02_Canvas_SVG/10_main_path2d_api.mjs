@@ -1,4 +1,4 @@
-// main_path2d_api.mjs — Path2D-Befehle an vier kleinen Beispielen
+// 10_main_path2d_api.mjs — Path2D-Befehle an vier kleinen Beispielen
 const blau = '#00aadc';
 const dunkel = '#193058';
 const rot = '#b6163d';

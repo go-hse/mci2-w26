@@ -1,4 +1,4 @@
-// render-worker.mjs — eigener Thread: nur Zustand + Zeichnen
+// 08_render-worker.mjs — eigener Thread: nur Zustand + Zeichnen
 let ctx, width, height;
 const balls = [];
 const radius = 6;

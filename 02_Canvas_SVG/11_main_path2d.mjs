@@ -1,4 +1,4 @@
-// main_path2d.mjs — Path2D: Geometrie einmal bauen, in jedem Frame wiederverwenden
+// 11_main_path2d.mjs — Path2D: Geometrie einmal bauen, in jedem Frame wiederverwenden
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 const info = document.getElementById('info');

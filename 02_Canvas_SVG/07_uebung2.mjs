@@ -1,4 +1,4 @@
-// uebung2.mjs — Übung 2: Ladekreis (Vorlage)
+// 07_uebung2.mjs — Übung 2: Ladekreis (Vorlage)
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 

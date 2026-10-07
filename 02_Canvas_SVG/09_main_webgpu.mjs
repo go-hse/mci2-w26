@@ -1,4 +1,4 @@
-// main_webgpu.mjs — WebGPU: ein rotierendes Dreieck mit eigenem Shader
+// 09_main_webgpu.mjs — WebGPU: ein rotierendes Dreieck mit eigenem Shader
 const canvas = document.getElementById('game');
 const info = document.getElementById('info');
 

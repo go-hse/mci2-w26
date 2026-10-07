@@ -1,4 +1,4 @@
-// main_fullscreen.mjs
+// 05_main_fullscreen.mjs
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 

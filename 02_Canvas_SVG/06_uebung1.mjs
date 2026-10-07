@@ -1,4 +1,4 @@
-// uebung1.mjs — Übung 1: Analoguhr (Vorlage)
+// 06_uebung1.mjs — Übung 1: Analoguhr (Vorlage)
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 ctx.strokeStyle = '#193058';

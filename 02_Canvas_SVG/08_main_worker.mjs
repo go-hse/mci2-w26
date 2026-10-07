@@ -1,8 +1,8 @@
-// main_worker.mjs — Haupt-Thread: DOM, Eingaben, keine Zeichenarbeit
+// 08_main_worker.mjs — Haupt-Thread: DOM, Eingaben, keine Zeichenarbeit
 const canvas = document.getElementById('game');
 const offscreen = canvas.transferControlToOffscreen();
 
-const worker = new Worker('./render-worker.mjs', { type: 'module' });
+const worker = new Worker('./08_render-worker.mjs', { type: 'module' });
 worker.postMessage(
     { type: 'init', canvas: offscreen },
     [offscreen]                        // Transfer: Eigentum wechselt

@@ -1,4 +1,4 @@
-// uebung3.mjs — Übung 3: Herzen anklicken (Vorlage)
+// 12_uebung3.mjs — Übung 3: Herzen anklicken (Vorlage)
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 

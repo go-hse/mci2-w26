@@ -3,19 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>OffscreenCanvas mit Worker</title>
+    <title>WebGPU: Minimalbeispiel</title>
     <style>
+        body {
+            font-family: sans-serif;
+            color: #193058;
+        }
+
         canvas {
             border: 1px solid #193058;
-            background: #f0f0f0;
         }
     </style>
 </head>
 
 <body>
     <canvas id="game" width="800" height="450"></canvas>
-    <p>Klick in die Fläche erzeugt einen weiteren Ball (im Worker).</p>
-    <script type="module" src="main_worker.mjs"></script>
+    <p id="info"></p>
+    <script type="module" src="09_main_webgpu.mjs"></script>
 </body>
 
 </html>

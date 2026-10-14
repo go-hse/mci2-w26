@@ -1,0 +1,28 @@
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30%" height="30%">
+            <!-- Hintergrund: Weiß mit abgerundeten Ecken -->
+            <rect width="512" height="512" rx="112" fill="#ffffff" />
+
+            <!-- Verlängertes rotes Eck (Winkel oben links) -->
+            <path d="M 40 90 h 200 v 40 h -160 v 160 h -40 Z" fill="#c30626" />
+
+            <!-- Dichter herangerücktes "HE" -->
+            <g fill="#005b8c">
+                <!-- Buchstabe: H -->
+                <!-- Linker Balken -->
+                <rect x="109" y="158" width="44" height="198" />
+                <!-- Rechter Balken -->
+                <rect x="218" y="158" width="44" height="198" />
+                <!-- Querbalken (Mitte) -->
+                <rect x="109" y="235" width="153" height="44" />
+
+                <!-- Buchstabe: E -->
+                <!-- Senkrechter Balken -->
+                <rect x="295" y="158" width="44" height="198" />
+                <!-- Oberer Balken -->
+                <rect x="295" y="158" width="126" height="37" />
+                <!-- Mittlerer Balken -->
+                <rect x="295" y="238" width="112" height="36" />
+                <!-- Unterer Balken -->
+                <rect x="295" y="319" width="126" height="37" />
+            </g>
+        </svg>

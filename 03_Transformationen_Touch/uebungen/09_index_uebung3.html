@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Übung 3: Raumschiff</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #193058;
+        }
+
+        canvas {
+            border: 1px solid #193058;
+            background: #f0f0f0;
+            touch-action: none;
+        }
+
+        button {
+            font-size: 18px;
+            margin: 4px;
+            padding: 6px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game" width="800" height="450"></canvas>
+    <p>
+        <button id="links">⟲ 15°</button>
+        <button id="rechts">⟳ 15°</button>
+        <button id="schub">Schub</button>
+        <button id="wind">Wind →</button>
+        <button id="reset">Reset</button>
+    </p>
+    <script type="module" src="09_uebung3.mjs"></script>
+</body>
+
+</html>

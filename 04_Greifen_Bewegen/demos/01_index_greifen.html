@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Greifen ohne Sprung</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #193058;
+        }
+
+        canvas {
+            border: 1px solid #193058;
+            background: #f0f0f0;
+            touch-action: none;  /* kein Scrollen/Zoomen durch Gesten */
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game" width="800" height="450"></canvas>
+    <p>Figur mit Maus oder Finger greifen und verschieben.</p>
+    <script type="module" src="01_main_greifen.mjs"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Reihenfolge: translate → rotate vs. rotate → translate</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #193058;
+        }
+
+        canvas {
+            border: 1px solid #193058;
+            background: #f0f0f0;
+            width: 900px;
+            height: 480px;
+            touch-action: none;
+        }
+
+        button,
+        input {
+            font-size: 18px;
+            margin: 4px;
+            vertical-align: middle;
+        }
+
+        input[type=range] {
+            width: 520px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game" width="900" height="480"></canvas>
+    <div>
+        <button id="play">Pause</button>
+        <input id="zeit" type="range" min="0" max="1" step="0.001" value="0">
+        <label><input id="spur" type="checkbox" checked> Spur</label>
+    </div>
+
+    <script type="module" src="00_main_reihenfolge.mjs"></script>
+</body>
+
+</html>

@@ -3,8 +3,8 @@ const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 
 // U-Form, lokal um (0, 0), Einheit 1
-const U = new Path2D(
-    'M -2 -2 L -2 2 L -1 2 L -1 -1 L 1 -1 L 1 2 L 2 2 L 2 -2 Z');
+const U = new Path2D('M -2 -2 L -2 2 L -1 2 L -1 -1 L 1 -1 L 1 2 L 2 2 L 2 -2 Z');
+
 const figur = {
     m: new DOMMatrix().translate(400, 225).rotate(-20).scale(40),
 };

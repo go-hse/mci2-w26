@@ -32,7 +32,7 @@ function schub(px) {
 function wind(px) {
     // TODO 3: px Pixel nach rechts schieben (Weltsystem),
     //         egal wohin das Schiff zeigt
-}
+} 5
 
 const aktionen = {
     links: () => drehen(-15), rechts: () => drehen(15),

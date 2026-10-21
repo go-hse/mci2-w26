@@ -2,10 +2,11 @@
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 
-const U = new Path2D(
-    'M -2 -2 L -2 2 L -1 2 L -1 -1 L 1 -1 L 1 2 L 2 2 L 2 -2 Z');
+const U = new Path2D('M -2 -2 L -2 2 L -1 2 L -1 -1 L 1 -1 L 1 2 L 2 2 L 2 -2 Z');
 const figur = { m: new DOMMatrix().translate(400, 225).scale(50) };
+
 const finger = new Map();  // pointerId → { x, y }, max. zwei
+
 let p = null;              // Figur relativ zu den Fingern
 
 // F: Matrix, die die Finger beschreiben
@@ -14,18 +15,16 @@ function fingerMatrix() {
     if (!b) return new DOMMatrix().translate(a.x, a.y);  // 1 Finger
     const grad = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
     const abstand = Math.hypot(b.x - a.x, b.y - a.y);
-    return new DOMMatrix().translate(a.x, a.y).rotate(grad)
-        .scale(abstand);
+    return new DOMMatrix().translate(a.x, a.y).rotate(grad).scale(abstand);
 }
 
 // bei jeder Änderung der Fingerzahl neu greifen: P = F⁻¹ · L
 function neuGreifen() {
-    p = finger.size === 0 ? null
-        : fingerMatrix().inverse().multiply(figur.m);
+    p = finger.size === 0 ? null : fingerMatrix().inverse().multiply(figur.m);
 }
 
-function getroffen(pos) {
-    const lokal = figur.m.inverse().transformPoint(pos);
+function getroffen(fingerpos) {
+    const lokal = figur.m.inverse().transformPoint(fingerpos);
     ctx.resetTransform();
     return ctx.isPointInPath(U, lokal.x, lokal.y);
 }

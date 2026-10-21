@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Übung 3: Roboterarm und Hindernisse</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #193058;
+        }
+
+        canvas {
+            border: 1px solid #193058;
+            background: #f0f0f0;
+            touch-action: none;  /* kein Scrollen/Zoomen durch Gesten */
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game" width="800" height="450"></canvas>
+    <p>Trifft der Arm ein Hindernis, kehrt er die Bewegungsrichtung um.</p>
+    <ol>
+        <li>Rechne die Tastpunkte vom System des Arms ins Weltsystem um.</li>
+        <li>Rechne sie weiter ins lokale System jedes Hindernisses um.</li>
+        <li>Prüfe dort mit <code>ctx.isPointInPath</code>, ob ein Treffer
+            vorliegt.</li>
+        <li>Kehre bei einem Treffer die Drehrichtung aller Gelenke um, ohne
+            dass der Arm im Hindernis hängen bleibt.</li>
+    </ol>
+    <p>Zusatz: Fasse Schritt 1 und 2 zu <em>einer</em> Matrix zusammen
+        (Arm-System → Hindernis-System). Geht der Test auch ganz ohne
+        <code>inverse()</code>, wenn du vorher <code>ctx.setTransform(h.m)</code>
+        aufrufst?</p>
+    <script type="module" src="05_uebung3.mjs"></script>
+</body>
+
+</html>

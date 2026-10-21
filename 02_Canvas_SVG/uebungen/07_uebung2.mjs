@@ -5,7 +5,7 @@ const ctx = canvas.getContext('2d');
 const DAUER = 5;  // Sekunden bis 100 %
 let fortschritt = 0;  // 0 … 1
 let drehung = 0;  // Winkel des Spinners in rad
-let last = performance.now();
+let last = performance.now(); // zum Bilden der Differenz
 
 function update(dt) {
     // TODO 1: fortschritt in DAUER Sekunden von 0 auf 1,
@@ -23,6 +23,7 @@ function draw() {
 }
 
 function loop(now) {
+
     // TODO 7: dt in Sekunden (höchstens 0.05), update, draw,
     //         nächsten Frame anfordern
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fitts' Law zum Ausprobieren</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #193058;
+            margin: 12px;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            aspect-ratio: 3 / 2;
+            border: 1px solid #193058;
+            background: #f0f0f0;
+            touch-action: none;
+            user-select: none;
+        }
+
+        .leiste {
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            align-items: center;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+        button {
+            font-size: 18px;
+            min-height: 44px;
+            padding: 0 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game"></canvas>
+    <div class="leiste">
+        <button id="kurz">Schnelltest (4 Bedingungen)</button>
+        <button id="voll">Vollständig (9 Bedingungen)</button>
+        <button id="ende">Lauf beenden &amp; auswerten</button>
+        <button id="csv">Daten als CSV</button>
+        <button id="neu">Alles löschen</button>
+    </div>
+    <p style="max-width: 900px">Ablauf: Test wählen, jede Bedingung
+        mit einem Tipp beginnen, dann 13 Ziele nacheinander antippen.
+        Nach der letzten Bedingung (oder mit „Lauf beenden“) erscheint
+        die Auswertung hier im Bild. Die CSV enthält alle Einzelversuche,
+        auch die des laufenden Tests.</p>
+
+    <script type="module" src="00_main_fitts.mjs"></script>
+</body>
+
+</html>

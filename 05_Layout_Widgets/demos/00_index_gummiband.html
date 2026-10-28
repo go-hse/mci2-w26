@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gummiband-Effekt: Latenz beim Ziehen</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #193058;
+            margin: 12px;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            aspect-ratio: 9 / 5;
+            border: 1px solid #193058;
+            background: #f0f0f0;
+            touch-action: none;
+        }
+
+        .leiste {
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            align-items: center;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+        button,
+        select {
+            font-size: 18px;
+            min-width: 64px;
+            min-height: 44px;
+        }
+
+        input[type=range] {
+            width: 260px;
+        }
+
+        label {
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game"></canvas>
+    <div class="leiste">
+        <label>Latenz
+            <input id="latenz" type="range" min="0" max="500" step="10" value="150">
+            <b id="wert">150 ms</b>
+        </label>
+        <span>
+            <button data-ms="0">0</button>
+            <button data-ms="50">50</button>
+            <button data-ms="100">100</button>
+            <button data-ms="150">150</button>
+            <button data-ms="300">300</button>
+        </span>
+        <label>Bewegung
+            <select id="bewegung">
+                <option value="hand">Finger / Maus</option>
+                <option value="kreis">Kreisbahn</option>
+                <option value="ziele">Ziel zu Ziel</option>
+            </select>
+        </label>
+        <label><input id="spur" type="checkbox" checked> Spur</label>
+        <label>Vorhersage
+            <select id="modell">
+                <option value="keine">keine</option>
+                <option value="linear">linear</option>
+                <option value="kalman">Kalman-Filter</option>
+            </select>
+        </label>
+        <label><input id="zittern" type="checkbox"> Zittern (Messrauschen 4 px)</label>
+        <label>Vorhersageanteil
+            <input id="anteil" type="range" min="0" max="100" step="10" value="100">
+            <b id="anteilwert">100 %</b>
+        </label>
+        <label id="glaettungZeile">Kalman-Glättung
+            <input id="glaettung" type="range" min="-5" max="-2" step="0.25" value="-3.75">
+            <b id="qwert"></b>
+        </label>
+    </div>
+
+    <script type="module" src="00_main_gummiband.mjs"></script>
+</body>
+
+</html>
